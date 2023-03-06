@@ -2,6 +2,8 @@
 
 ## Brincando com Ansible
 
+*Desafio proposto durante o curso do Programa Deselvolve (Grupo Boticario)*
+
 ### Atividades
 
 1 - Subir uma instancia(ubuntu free tier) na aws ou usar seu proprio PC.
