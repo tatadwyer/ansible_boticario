@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+
+    - name: create new EC2 key
+      amazon.aws.ec2_key:
+        name: my_keypair
+
