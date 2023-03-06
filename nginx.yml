@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install nginx latest
+    ansible.builtin.apt:
+      name: nginx
+      state: latest
+
