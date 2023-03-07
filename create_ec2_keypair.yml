@@ -2,10 +2,11 @@
 
 - hosts: localhost
   connection: local
-  gather_facts: False
+  gather_facts: True
   tasks:
 
     - name: create new EC2 key
       amazon.aws.ec2_key:
         name: my_keypair
+        state: present
 
