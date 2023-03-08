@@ -5,8 +5,8 @@
   gather_facts: True
   tasks:
 
-    - name: create new EC2 key
+    - name: create new ec2 key
       amazon.aws.ec2_key:
-        name: my_keypair
+        name: ec2_ansible
         state: present
 

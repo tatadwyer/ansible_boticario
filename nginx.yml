@@ -1,11 +1,26 @@
 ---
 
 - hosts: all
-  become: true
+  become: True
   tasks:
 
-  - name: install nginx latest
+  - name: install nginx
     ansible.builtin.apt:
       name: nginx
-      state: latest
+      cache_valid_time: 3600
+      
+  - name: enable
+    ansible.builtin.systemd:
+      name: nginx
+      enabled: True
+  
+  - name: configure index html
+    ansible.builtin.template:
+      src: template.j2
+      dest: /var/www/html/index.html
+      mode: 0644
 
+  - name: restrart ninx
+    ansible.builtin.systemd:
+      name: nginx
+      state: restarted      
